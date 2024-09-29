@@ -12,4 +12,13 @@ export const createUser = async (req, res) => {
     if (finduser) {
         return res.json({status: 400, massage:'email alrady taken'})
     }
+    const newUser = await prisma.user.create({
+        data:{
+            name: name, 
+            email: email, 
+            password:password
+        }
+    })
+
+     return res.json({status: 400, massage:'user create succussfull'})
 }
