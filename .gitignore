@@ -1,0 +1,5 @@
+node_modules/ 
+.prisma/
+prisma/.env 
+prisma/migrations/
+.env
